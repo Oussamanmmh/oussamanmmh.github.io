@@ -23,8 +23,8 @@ jobs:
       # Public origin — canonical links, sitemap.xml, robots.txt and the JSON-LD
       # all derive from this. Change it if you attach a custom domain.
       NEXT_PUBLIC_SITE_URL: https://oussamanmmh.github.io
-      # Empty for a user site (<user>.github.io) or a custom domain.
-      # For a project site set it to "/<repo-name>", e.g. /portfolio
+      # Empty: this is a user site served from the domain root. A project site
+      # would need "/<repo-name>" here and the same path on the URL above.
       NEXT_PUBLIC_BASE_PATH: ''
     steps:
       - uses: actions/checkout@v4
