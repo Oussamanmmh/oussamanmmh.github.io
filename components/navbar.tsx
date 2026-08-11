@@ -29,6 +29,11 @@ const NAV_LINKS = [
     hover: 'hover:bg-inverse-primary hover:text-secondary hover:-rotate-6',
   },
   {
+    label: 'CV',
+    href: '#resume',
+    hover: 'hover:bg-secondary-fixed hover:text-on-secondary-fixed hover:-rotate-3',
+  },
+  {
     label: 'Contact',
     href: '#contact',
     hover: 'hover:bg-primary-container hover:text-on-primary-container hover:rotate-3',
@@ -81,7 +86,7 @@ export function Navbar() {
           </a>
         </div>
 
-        <div className="hidden md:flex gap-8 items-center">
+        <div className="hidden md:flex gap-4 lg:gap-8 items-center">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}

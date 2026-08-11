@@ -6,6 +6,8 @@ __v0_jsx-dev-runtime.ts
 .v0-trash/
 .vercel/
 *.pdf
+# ...except the CV the site actually serves.
+!public/*.pdf
 
 # Environment variables
 .env*.local

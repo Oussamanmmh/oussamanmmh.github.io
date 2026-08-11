@@ -7,6 +7,7 @@ import { Hero } from '@/components/hero'
 import { Navbar } from '@/components/navbar'
 import { NoiseOverlay } from '@/components/noise-overlay'
 import { Projects } from '@/components/projects'
+import { Resume } from '@/components/resume'
 import { Skills } from '@/components/skills'
 import { SmoothScroll } from '@/components/smooth-scroll'
 
@@ -23,6 +24,7 @@ export default function Page() {
         <Skills />
         <Projects />
         <Experience />
+        <Resume />
         <Contact />
       </main>
       <Footer />

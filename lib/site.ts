@@ -23,6 +23,9 @@ export const BASE_PATH = (process.env.NEXT_PUBLIC_BASE_PATH ?? '').replace(
   '',
 )
 
+/** Lives in public/. Prefix with BASE_PATH — plain <a> hrefs are not rewritten. */
+export const CV_FILE = '/nemamcha-oussama-cv.pdf'
+
 export const PERSON_NAME = 'Nemamcha Oussama'
 export const JOB_TITLE = 'Software Engineer'
 
