@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Anton, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import {
-  BASE_PATH,
   PERSON_NAME,
   SITE_DESCRIPTION,
   SITE_KEYWORDS,
@@ -75,23 +74,11 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
   },
-  icons: {
-    icon: [
-      {
-        url: `${BASE_PATH}/icon-light-32x32.png`,
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: `${BASE_PATH}/icon-dark-32x32.png`,
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: `${BASE_PATH}/icon.svg`,
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: `${BASE_PATH}/apple-icon.png`,
-  },
+  /*
+    No `icons` block on purpose: app/icon.svg and app/apple-icon.tsx are file
+    conventions, so Next emits the links itself — and, unlike hand-written URLs,
+    it applies the basePath for us.
+  */
 }
 
 export const viewport: Viewport = {

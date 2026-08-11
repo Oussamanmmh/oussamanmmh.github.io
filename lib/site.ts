@@ -60,6 +60,8 @@ export const personJsonLd = {
   email: `mailto:${EMAIL}`,
   jobTitle: JOB_TITLE,
   description: SITE_DESCRIPTION,
+  // The "ON" monogram, served by the app/icon.svg file convention.
+  image: `${SITE_URL}${BASE_PATH}/icon.svg`,
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'DZ',
@@ -103,5 +105,6 @@ export const websiteJsonLd = {
   name: SITE_TITLE,
   description: SITE_DESCRIPTION,
   inLanguage: 'en',
+  image: `${SITE_URL}${BASE_PATH}/icon.svg`,
   publisher: { '@id': `${SITE_URL}/#person` },
 }
