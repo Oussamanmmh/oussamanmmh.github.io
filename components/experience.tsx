@@ -143,7 +143,7 @@ function TimelineRow({ role }: { role: Role }) {
         whileHover={
           shouldReduce ? undefined : { rotate: 0, scale: 1.03, y: -6 }
         }
-        className={`p-8 border-4 w-full ${role.width} ${role.card} ${
+        className={`p-5 sm:p-8 border-4 w-full ${role.width} ${role.card} ${
           role.side === 'left'
             ? 'md:col-start-1 md:row-start-1 md:ml-auto'
             : 'md:col-start-2 md:row-start-1 md:mr-auto'
@@ -162,7 +162,7 @@ function TimelineRow({ role }: { role: Role }) {
           )}
         </div>
         <h3
-          className={`font-headline-lg text-headline-lg-mobile uppercase text-balance ${role.heading}`}
+          className={`font-headline-lg text-[28px] leading-[30px] sm:text-headline-lg-mobile uppercase text-balance ${role.heading}`}
         >
           {role.title}
         </h3>
@@ -209,12 +209,12 @@ export function Experience() {
       initial="hidden"
       whileInView={inView}
       viewport={sectionViewport}
-      className="py-32 px-margin-page bg-surface relative"
+      className="py-20 sm:py-32 px-margin-page bg-surface relative overflow-hidden"
     >
       <div className="max-w-[1000px] mx-auto relative z-10">
         <motion.h2
           variants={headingIn}
-          className="font-display-2xl text-[80px] md:text-display-2xl text-tertiary-container mb-20 text-center"
+          className="font-display-2xl text-[52px] sm:text-[80px] md:text-display-2xl leading-[0.95] text-tertiary-container mb-12 sm:mb-20 text-center"
         >
           HISTORY
           <span className="sr-only"> — work experience and education</span>

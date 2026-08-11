@@ -110,7 +110,7 @@ export function Contact() {
       initial="hidden"
       whileInView={inView}
       viewport={sectionViewport}
-      className="relative py-32 px-margin-page bg-surface-container-low border-t-4 border-primary overflow-hidden"
+      className="relative py-20 sm:py-32 px-margin-page bg-surface-container-low border-t-4 border-primary overflow-hidden"
     >
       {/* Slow-drifting shapes, echoing the hero, so the section stays alive. */}
       <div
@@ -131,7 +131,7 @@ export function Contact() {
         >
           <motion.h2
             variants={headingIn}
-            className="font-display-2xl text-[80px] md:text-display-2xl text-secondary-fixed uppercase drop-shadow-[6px_6px_0px_#bd00ff]"
+            className="font-display-2xl text-[46px] sm:text-[80px] md:text-display-2xl leading-[0.95] text-secondary-fixed uppercase drop-shadow-[4px_4px_0px_#bd00ff] sm:drop-shadow-[6px_6px_0px_#bd00ff]"
           >
             Get In Touch
           </motion.h2>
@@ -210,7 +210,7 @@ export function Contact() {
           {/* Form */}
           <motion.div
             variants={landIn(-1)}
-            className="lg:col-span-7 bg-surface border-4 border-secondary-fixed hard-shadow-secondary p-8 md:p-10"
+            className="lg:col-span-7 bg-surface border-4 border-secondary-fixed hard-shadow-secondary p-5 sm:p-8 md:p-10"
           >
             <form onSubmit={handleSubmit} className="flex flex-col gap-6" noValidate={false}>
               <input
@@ -286,7 +286,7 @@ export function Contact() {
                 whileHover={shouldReduce ? undefined : { scale: 1.03, y: -4 }}
                 whileTap={shouldReduce ? undefined : { scale: 0.98 }}
                 data-cursor="hover"
-                className="self-start inline-flex items-center gap-3 font-headline-lg text-headline-lg-mobile uppercase bg-primary text-on-primary-fixed px-8 py-4 border-4 border-primary-fixed animate-shadow-pulse btn-active disabled:opacity-60 disabled:cursor-not-allowed"
+                className="self-start inline-flex items-center gap-3 font-headline-lg text-[28px] sm:text-headline-lg-mobile uppercase bg-primary text-on-primary-fixed px-6 py-3 sm:px-8 sm:py-4 border-4 border-primary-fixed animate-shadow-pulse btn-active disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {status === 'sending' ? 'Sending…' : 'Send it'}
                 <motion.span

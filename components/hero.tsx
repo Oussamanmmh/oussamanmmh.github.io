@@ -26,7 +26,8 @@ export function Hero() {
   const { shouldReduce } = useMotionPreference()
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center items-center overflow-hidden border-b-4 border-secondary-fixed">
+    // svh, not vh: mobile browser chrome makes vh overshoot the screen.
+    <section className="relative min-h-[90svh] flex flex-col justify-center items-center overflow-hidden border-b-4 border-secondary-fixed">
       <ShaderCanvas className="absolute inset-0 w-full h-full z-0" />
 
       <div
@@ -60,7 +61,7 @@ export function Hero() {
             },
             reduced: { opacity: 1, scale: 1, rotate: -5 },
           }}
-          className="font-display-2xl text-[110px] md:text-[190px] lg:text-[240px] leading-[0.8] text-secondary-fixed drop-shadow-[8px_8px_0px_rgba(207,73,0,1)] uppercase mix-blend-difference [-webkit-text-stroke:4px_#ecb2ff] pointer-events-none"
+          className="font-display-2xl text-[13vw] sm:text-[90px] md:text-[150px] lg:text-[220px] leading-[0.85] text-secondary-fixed drop-shadow-[4px_4px_0px_rgba(207,73,0,1)] sm:drop-shadow-[8px_8px_0px_rgba(207,73,0,1)] uppercase mix-blend-difference [-webkit-text-stroke:2px_#ecb2ff] sm:[-webkit-text-stroke:4px_#ecb2ff] pointer-events-none max-w-full"
         >
           NEMAMCHA
           {/* The display type is one word; crawlers and screen readers get the
@@ -87,7 +88,7 @@ export function Hero() {
         >
           <DragMarquee
             className="w-full overflow-hidden py-4 bg-surface-bright/80 border-y-4 border-primary-fixed transform rotate-1"
-            contentClassName="font-body-md text-2xl tracking-widest text-secondary-fixed uppercase flex gap-8"
+            contentClassName="font-body-md text-base sm:text-2xl tracking-widest text-secondary-fixed uppercase flex gap-8"
           >
             {MARQUEE_ITEMS.map((_, index) => (
               <span key={index}>
@@ -109,7 +110,7 @@ export function Hero() {
             },
             reduced: { opacity: 1, y: 0, rotate: 1 },
           }}
-          className="font-headline-lg text-headline-lg-mobile md:text-headline-lg mt-8 text-primary bg-surface-container-high px-8 py-4 border-4 border-primary hard-shadow-black"
+          className="font-headline-lg text-[26px] leading-[28px] sm:text-headline-lg-mobile md:text-headline-lg mt-8 text-primary bg-surface-container-high px-4 py-3 sm:px-8 sm:py-4 border-4 border-primary hard-shadow-black max-w-full text-balance"
         >
           Software Engineer &amp; Backend Architect
         </motion.h2>
@@ -130,9 +131,9 @@ export function Hero() {
           {STATS.map((stat) => (
             <li
               key={stat.label}
-              className="bg-surface-container-lowest/90 border-4 border-secondary-fixed px-6 py-3 hard-shadow-black"
+              className="bg-surface-container-lowest/90 border-4 border-secondary-fixed px-4 py-3 sm:px-6 hard-shadow-black"
             >
-              <span className="font-headline-lg text-headline-lg-mobile text-secondary-fixed block leading-none">
+              <span className="font-headline-lg text-[30px] sm:text-headline-lg-mobile text-secondary-fixed block leading-none">
                 {stat.count === undefined ? (
                   stat.value
                 ) : (

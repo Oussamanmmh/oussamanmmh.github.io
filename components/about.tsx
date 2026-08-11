@@ -45,7 +45,7 @@ export function About() {
       initial="hidden"
       whileInView={inView}
       viewport={sectionViewport}
-      className="py-32 px-margin-page bg-surface-container-low overflow-hidden"
+      className="py-20 sm:py-32 px-margin-page bg-surface-container-low overflow-hidden"
     >
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
         <motion.div
@@ -55,9 +55,9 @@ export function About() {
         >
           <motion.div
             variants={landIn(2)}
-            className="bg-primary-container p-8 border-4 border-secondary-fixed hard-shadow-secondary hover:rotate-0 transition-transform duration-300"
+            className="bg-primary-container p-6 sm:p-8 border-4 border-secondary-fixed hard-shadow-secondary hover:rotate-0 transition-transform duration-300"
           >
-            <h3 className="font-headline-lg text-headline-lg text-on-primary-container uppercase mb-4">
+            <h3 className="font-headline-lg text-[38px] leading-[38px] sm:text-headline-lg text-on-primary-container uppercase mb-4">
               Hello World
             </h3>
             <p className="font-body-md text-body-md text-on-primary-container font-bold">
@@ -76,15 +76,15 @@ export function About() {
         >
           <motion.div
             variants={landIn(-3, 0.12)}
-            className="bg-tertiary-container p-10 border-4 border-primary hard-shadow-primary hover:rotate-1 transition-transform duration-300"
+            className="bg-tertiary-container p-6 sm:p-10 border-4 border-primary hard-shadow-primary hover:rotate-1 transition-transform duration-300"
           >
-            <dl className="grid grid-cols-2 gap-6 mb-6">
+            <dl className="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
               {FACTS.map((fact) => (
                 <div
                   key={fact.label}
-                  className="border-4 border-surface-container-highest bg-surface-container-lowest p-4"
+                  className="border-4 border-surface-container-highest bg-surface-container-lowest p-3 sm:p-4"
                 >
-                  <dt className="font-display-2xl text-[44px] leading-none text-secondary-fixed">
+                  <dt className="font-display-2xl text-[32px] sm:text-[44px] leading-none text-secondary-fixed">
                     <CountUp
                       to={fact.count}
                       suffix={fact.suffix}
@@ -107,13 +107,13 @@ export function About() {
         <motion.div
           ref={badgeRef}
           style={{ y: badgeY }}
-          className="md:col-span-4 md:col-start-4 relative z-30 -mt-20 md:-mt-10 ml-10"
+          className="md:col-span-4 md:col-start-4 relative z-30 -mt-10 md:-mt-10 ml-2 md:ml-10"
         >
           <motion.div
             variants={landIn(6, 0.24)}
-            className="bg-secondary-fixed p-6 border-4 border-surface-container-highest hard-shadow-black inline-block"
+            className="bg-secondary-fixed p-4 sm:p-6 border-4 border-surface-container-highest hard-shadow-black inline-block"
           >
-            <span className="font-headline-lg text-headline-lg-mobile text-on-secondary-fixed uppercase">
+            <span className="font-headline-lg text-[28px] sm:text-headline-lg-mobile text-on-secondary-fixed uppercase">
               ESI ’22 → NOW
             </span>
           </motion.div>

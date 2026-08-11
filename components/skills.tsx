@@ -107,7 +107,7 @@ export function Skills() {
       initial="hidden"
       whileInView={inView}
       viewport={sectionViewport}
-      className="py-32 px-margin-page bg-surface border-y-4 border-primary-fixed"
+      className="py-20 sm:py-32 px-margin-page bg-surface border-y-4 border-primary-fixed overflow-hidden"
     >
       <motion.div
         ref={headingRef}
@@ -116,7 +116,7 @@ export function Skills() {
       >
         <motion.h2
           variants={headingIn}
-          className="font-display-2xl text-[80px] md:text-display-2xl text-on-surface uppercase border-b-4 border-tertiary-container inline-block pb-2"
+          className="font-display-2xl text-[52px] sm:text-[80px] md:text-display-2xl leading-[0.95] text-on-surface uppercase border-b-4 border-tertiary-container inline-block pb-2"
         >
           Arsenal
           <span className="sr-only"> — technical skills and stack</span>
@@ -124,11 +124,11 @@ export function Skills() {
       </motion.div>
 
       {/* Always-moving band of the stack, so the section never sits still. */}
-      <motion.div variants={fadeUp} className="w-full max-w-[100vw] -mx-margin-page mb-16">
+      <motion.div variants={fadeUp} className="w-full mb-12 sm:mb-16">
         <DragMarquee
           duration={26}
           className="w-full py-3 bg-surface-container-lowest border-y-4 border-tertiary-container -rotate-1"
-          contentClassName="font-body-md text-xl md:text-2xl tracking-widest text-tertiary uppercase flex gap-8"
+          contentClassName="font-body-md text-sm sm:text-xl md:text-2xl tracking-widest text-tertiary uppercase flex gap-8"
         >
           {TICKER_ITEMS.map((_, index) => (
             <span key={index}>{TICKER_TEXT}</span>
@@ -136,7 +136,7 @@ export function Skills() {
         </DragMarquee>
       </motion.div>
 
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {GROUPS.map((group, index) => (
           <motion.article
             key={group.title}
@@ -156,11 +156,11 @@ export function Skills() {
               style={{ animationDelay: `${index * 0.45}s` }}
             >
               <h3
-                className={`font-headline-lg text-headline-lg-mobile uppercase mb-5 ${group.heading}`}
+                className={`font-headline-lg text-[30px] sm:text-headline-lg-mobile uppercase mb-5 text-balance ${group.heading}`}
               >
                 {group.title}
               </h3>
-              <ul className="flex flex-wrap gap-3">
+              <ul className="flex flex-wrap gap-2 sm:gap-3">
                 {group.items.map((item, itemIndex) => (
                   <motion.li
                     key={item}

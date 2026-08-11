@@ -64,17 +64,17 @@ export function Navbar() {
             ? { duration: 0.3 }
             : { type: 'spring', stiffness: 180, damping: 20, delay: 0.1 }
         }
-        className="sticky top-0 z-50 flex justify-between items-center px-margin-page w-full bg-surface/90 backdrop-blur-sm border-primary dark:border-primary-fixed-dim shadow-[8px_8px_0px_0px_#c3f400] dark:shadow-[8px_8px_0px_0px_#abd600] py-8 border-b-8"
+        className="sticky top-0 z-50 flex justify-between items-center gap-3 px-margin-page w-full bg-surface/90 backdrop-blur-sm border-primary dark:border-primary-fixed-dim shadow-[8px_8px_0px_0px_#c3f400] dark:shadow-[8px_8px_0px_0px_#abd600] py-5 sm:py-8 border-b-8"
       >
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4 min-w-0">
           <span
             aria-hidden="true"
-            className="w-12 h-12 shrink-0 rounded-full border-4 border-primary bg-secondary-fixed text-on-secondary-fixed font-headline-lg text-[22px] flex items-center justify-center"
+            className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-full border-4 border-primary bg-secondary-fixed text-on-secondary-fixed font-headline-lg text-[18px] sm:text-[22px] flex items-center justify-center"
           >
             ON
           </span>
           <a
-            className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary dark:text-primary-fixed-dim uppercase tracking-tighter"
+            className="font-headline-lg text-[26px] sm:text-headline-lg-mobile md:text-headline-lg text-primary dark:text-primary-fixed-dim uppercase tracking-tighter truncate"
             href="#"
           >
             NEMAMCHA
@@ -128,8 +128,8 @@ export function Navbar() {
             }
             className="fixed inset-0 z-[60] bg-surface-container-lowest flex flex-col md:hidden"
           >
-            <div className="flex justify-between items-center px-margin-page py-8 border-b-8 border-primary">
-              <span className="font-headline-lg text-headline-lg-mobile text-primary uppercase tracking-tighter">
+            <div className="shrink-0 flex justify-between items-center px-margin-page py-5 border-b-8 border-primary">
+              <span className="font-headline-lg text-[30px] text-primary uppercase tracking-tighter">
                 MENU
               </span>
               <button
@@ -143,7 +143,11 @@ export function Navbar() {
             </div>
 
             <motion.div
-              className="flex-1 flex flex-col justify-center gap-6 px-margin-page"
+              /*
+                Scrollable: five links plus the CTA at display sizes overflow a
+                short phone viewport, and the panel would clip them silently.
+              */
+              className="flex-1 min-h-0 overflow-y-auto flex flex-col justify-center gap-4 px-margin-page py-8"
               initial="hidden"
               animate={shouldReduce ? 'reduced' : 'visible'}
               variants={{
@@ -173,7 +177,7 @@ export function Navbar() {
                     },
                     reduced: { opacity: 1, x: 0, rotate: 0 },
                   }}
-                  className={`font-headline-lg text-headline-lg-mobile uppercase text-on-surface bg-surface-container px-6 py-5 border-4 border-on-surface hard-shadow-black ${link.hover}`}
+                  className={`font-headline-lg text-[30px] uppercase text-on-surface bg-surface-container px-5 py-4 border-4 border-on-surface hard-shadow-black ${link.hover}`}
                 >
                   {link.label}
                 </motion.a>
@@ -192,7 +196,7 @@ export function Navbar() {
                   },
                   reduced: { opacity: 1, y: 0, scale: 1 },
                 }}
-                className="font-headline-lg text-headline-lg-mobile uppercase text-center bg-primary text-on-primary-fixed px-6 py-6 border-8 border-primary-fixed hard-shadow-secondary mt-6"
+                className="font-headline-lg text-[30px] uppercase text-center bg-primary text-on-primary-fixed px-5 py-5 border-8 border-primary-fixed hard-shadow-secondary mt-4"
               >
                 Hire Me
               </motion.a>

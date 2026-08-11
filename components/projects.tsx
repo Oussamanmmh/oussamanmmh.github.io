@@ -156,7 +156,7 @@ export function Projects() {
       initial="hidden"
       whileInView={inView}
       viewport={sectionViewport}
-      className="py-32 px-margin-page bg-surface-container-high"
+      className="py-20 sm:py-32 px-margin-page bg-surface-container-high overflow-hidden"
     >
       <div className="max-w-[1440px] mx-auto">
         {/*
@@ -164,10 +164,14 @@ export function Projects() {
           Both animate `y`, so sharing one element would let the scroll-linked
           MotionValue override the entrance animation.
         */}
-        <motion.div ref={headingRef} style={{ y: headingY }} className="mb-20">
+        <motion.div
+          ref={headingRef}
+          style={{ y: headingY }}
+          className="mb-12 sm:mb-20"
+        >
           <motion.h2
             variants={headingIn}
-            className="font-display-2xl text-[80px] md:text-display-2xl text-primary drop-shadow-[4px_4px_0px_#000]"
+            className="font-display-2xl text-[46px] sm:text-[80px] md:text-display-2xl leading-[0.95] text-primary drop-shadow-[4px_4px_0px_#000]"
           >
             SELECTED WORKS
             <span className="sr-only">
@@ -177,18 +181,18 @@ export function Projects() {
           </motion.h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-gutter">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter">
           {PROJECTS.map((project) => (
             <motion.article
               key={project.title}
               variants={cardVariants(project.seed)}
               whileHover={hover}
               data-cursor="hover"
-              className={`${project.span} ${project.offset} group relative p-8 border-4 flex flex-col ${project.card}`}
+              className={`${project.span} ${project.offset} group relative p-6 sm:p-8 border-4 flex flex-col ${project.card}`}
             >
               <span
                 aria-hidden="true"
-                className={`font-display-2xl text-[90px] leading-none select-none ${project.indexClass}`}
+                className={`font-display-2xl text-[60px] sm:text-[90px] leading-none select-none ${project.indexClass}`}
               >
                 {project.index}
               </span>
@@ -205,7 +209,7 @@ export function Projects() {
               </div>
 
               <h3
-                className={`font-headline-lg text-headline-lg-mobile uppercase text-balance mb-4 ${project.titleClass}`}
+                className={`font-headline-lg text-[30px] leading-[32px] sm:text-headline-lg-mobile uppercase text-balance mb-4 ${project.titleClass}`}
               >
                 {project.title}
               </h3>

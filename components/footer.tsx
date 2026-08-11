@@ -21,13 +21,13 @@ export function Footer() {
       initial="hidden"
       whileInView={inView}
       viewport={sectionViewport}
-      className="bg-secondary-fixed dark:bg-secondary-fixed-dim w-full flex flex-col items-center justify-center gap-10 py-20 px-margin-page border-t-4 border-primary dark:border-primary-fixed-dim shadow-[-8px_-8px_0px_0px_#000000] overflow-hidden"
+      className="bg-secondary-fixed dark:bg-secondary-fixed-dim w-full flex flex-col items-center justify-center gap-6 sm:gap-10 py-14 sm:py-20 px-margin-page border-t-4 border-primary dark:border-primary-fixed-dim shadow-[-8px_-8px_0px_0px_#000000] overflow-hidden"
     >
       {/* Marquee Contact Prompt */}
       <motion.div variants={fadeUp} className="w-full my-10">
         <DragMarquee
           className="w-full border-y-8 border-on-secondary-fixed py-4 transform -rotate-2 bg-primary"
-          contentClassName="font-display-2xl text-[100px] md:text-[150px] leading-none text-on-secondary-fixed uppercase flex gap-10"
+          contentClassName="font-display-2xl text-[56px] sm:text-[100px] md:text-[150px] leading-none text-on-secondary-fixed uppercase flex gap-6 sm:gap-10"
         >
           {MARQUEE_ITEMS.map((_, index) => (
             <span key={index} className="shrink-0 whitespace-nowrap">
@@ -42,7 +42,7 @@ export function Footer() {
 
       <motion.div
         variants={popIn(0)}
-        className="font-headline-lg text-headline-lg text-on-secondary-fixed mb-8 uppercase text-center"
+        className="font-headline-lg text-[34px] leading-[36px] sm:text-headline-lg text-on-secondary-fixed mb-8 uppercase text-center text-balance"
       >
         Nemamcha Oussama
       </motion.div>
@@ -53,7 +53,7 @@ export function Footer() {
           visible: { transition: { staggerChildren: 0.08 } },
           reduced: {},
         }}
-        className="flex flex-wrap justify-center gap-8 md:gap-16"
+        className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-16"
       >
         {SOCIALS.map((social, index) => (
           <motion.a
@@ -62,7 +62,7 @@ export function Footer() {
             href={social.href}
             target={social.href.startsWith('http') ? '_blank' : undefined}
             rel={social.href.startsWith('http') ? 'noreferrer noopener' : undefined}
-            className="font-headline-lg text-headline-lg-mobile md:text-body-md md:font-body-md text-on-secondary-fixed-variant opacity-80 hover:text-on-secondary-fixed hover:font-bold hover:scale-110 hover:skew-x-6 hover:bg-tertiary transition-all px-4 py-2"
+            className="font-headline-lg text-[26px] sm:text-headline-lg-mobile md:text-body-md md:font-body-md text-on-secondary-fixed-variant opacity-80 hover:text-on-secondary-fixed hover:font-bold hover:scale-110 hover:skew-x-6 hover:bg-tertiary transition-all px-3 py-2"
           >
             {social.label}
           </motion.a>
@@ -71,7 +71,7 @@ export function Footer() {
 
       <motion.div
         variants={fadeUp}
-        className="font-headline-lg text-headline-lg-mobile md:text-body-md md:font-body-md text-on-secondary-fixed-variant opacity-80 mt-16 text-center"
+        className="font-body-md text-sm md:text-body-md text-on-secondary-fixed-variant opacity-80 mt-10 sm:mt-16 text-center text-balance"
       >
         © {new Date().getFullYear()} NEMAMCHA OUSSAMA — SOFTWARE ENGINEER.
       </motion.div>
