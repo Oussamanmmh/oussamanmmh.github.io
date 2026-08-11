@@ -1,6 +1,6 @@
 export const EMAIL = 'mo_nemamcha@esi.dz'
 export const GITHUB = 'https://github.com/oussamanmmh'
-export const LINKEDIN = 'https://linkedin.com/in/oussama-nemamcha'
+export const LINKEDIN = 'https://www.linkedin.com/in/oussama-nemamcha-028447351'
 
 /**
  * Single source of truth for everything the crawlers read: canonical URLs,
@@ -10,7 +10,7 @@ export const LINKEDIN = 'https://linkedin.com/in/oussama-nemamcha'
  * domain is live — canonical links and OG URLs are absolute and need it.
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://oussamanemamcha.com'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://oussamanmmh.github.io'
 ).replace(/\/$/, '')
 
 /**
